@@ -1,0 +1,39 @@
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -2, Delay Type: max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
+INFO: [Timing 38-78] ReportTimingParams: -max_paths 1 -nworst 1 -delay_type max -sort_by slack.
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
+| Date         : Tue Feb 13 22:00:49 2024
+| Host         : nanodcserver running 64-bit CentOS Linux release 7.4.1708 (Core)
+| Command      : report_timing
+| Design       : design9
+| Device       : 7a200t-fbg676
+| Speed File   : -2  PRODUCTION 1.22 2018-03-21
+------------------------------------------------------------------------------------
+
+Timing Report
+
+Slack:                    inf
+  Source:                 Q_reg/C
+                            (rising edge-triggered cell FDSE)
+  Destination:            Q
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        4.079ns  (logic 2.709ns (66.407%)  route 1.370ns (33.593%))
+  Logic Levels:           2  (FDSE=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X0Y101         FDSE                         0.000     0.000 r  Q_reg/C
+    SLICE_X0Y101         FDSE (Prop_fdse_C_Q)         0.379     0.379 r  Q_reg/Q
+                         net (fo=1, routed)           1.370     1.749    Q_OBUF
+    R18                  OBUF (Prop_obuf_I_O)         2.330     4.079 r  Q_OBUF_inst/O
+                         net (fo=0)                   0.000     4.079    Q
+    R18                                                               r  Q (OUT)
+  -------------------------------------------------------------------    -------------------
+
+
+
+

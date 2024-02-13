@@ -1,0 +1,39 @@
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -2, Delay Type: max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
+INFO: [Timing 38-78] ReportTimingParams: -max_paths 1 -nworst 1 -delay_type max -sort_by slack.
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
+| Date         : Tue Feb 13 21:50:16 2024
+| Host         : nanodcserver running 64-bit CentOS Linux release 7.4.1708 (Core)
+| Command      : report_timing
+| Design       : design5
+| Device       : 7a200t-fbg676
+| Speed File   : -2  PRODUCTION 1.22 2018-03-21
+------------------------------------------------------------------------------------
+
+Timing Report
+
+Slack:                    inf
+  Source:                 data_out_reg[2]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            data_out[2]
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        4.439ns  (logic 2.889ns (65.067%)  route 1.551ns (34.933%))
+  Logic Levels:           2  (FDRE=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X0Y105         FDRE                         0.000     0.000 r  data_out_reg[2]/C
+    SLICE_X0Y105         FDRE (Prop_fdre_C_Q)         0.348     0.348 r  data_out_reg[2]/Q
+                         net (fo=1, routed)           1.551     1.899    data_out_OBUF[2]
+    M26                  OBUF (Prop_obuf_I_O)         2.541     4.439 r  data_out_OBUF[2]_inst/O
+                         net (fo=0)                   0.000     4.439    data_out[2]
+    M26                                                               r  data_out[2] (OUT)
+  -------------------------------------------------------------------    -------------------
+
+
+
+

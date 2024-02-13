@@ -1,0 +1,42 @@
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -2, Delay Type: max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
+INFO: [Timing 38-78] ReportTimingParams: -max_paths 1 -nworst 1 -delay_type max -sort_by slack.
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
+| Date         : Tue Feb 13 21:44:26 2024
+| Host         : nanodcserver running 64-bit CentOS Linux release 7.4.1708 (Core)
+| Command      : report_timing
+| Design       : design3
+| Device       : 7a200t-fbg676
+| Speed File   : -2  PRODUCTION 1.22 2018-03-21
+------------------------------------------------------------------------------------
+
+Timing Report
+
+Slack:                    inf
+  Source:                 a
+                            (input port)
+  Destination:            cout
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        6.018ns  (logic 3.532ns (58.690%)  route 2.486ns (41.310%))
+  Logic Levels:           3  (IBUF=1 LUT3=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    R18                                               0.000     0.000 r  a (IN)
+                         net (fo=0)                   0.000     0.000    a
+    R18                  IBUF (Prop_ibuf_I_O)         0.852     0.852 r  a_IBUF_inst/O
+                         net (fo=2, routed)           0.936     1.788    a_IBUF
+    SLICE_X0Y101         LUT3 (Prop_lut3_I2_O)        0.126     1.914 r  sum_OBUF[1]_inst_i_1/O
+                         net (fo=2, routed)           1.550     3.464    cout_OBUF
+    P26                  OBUF (Prop_obuf_I_O)         2.553     6.018 r  cout_OBUF_inst/O
+                         net (fo=0)                   0.000     6.018    cout
+    P26                                                               r  cout (OUT)
+  -------------------------------------------------------------------    -------------------
+
+
+
+
